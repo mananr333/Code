@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فك الشفرة</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #container {
+            text-align: center;
+        }
+        #pinInput {
+            padding: 10px;
+            font-size: 16px;
+            color: black;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+        #errorMessage {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function checkPin() {
+            const pin = document.getElementById('pinInput').value;
+            if (pin === 'AWARENESS') {
+                // Redirect to the image page
+                window.location.href = 'https://raw.githubusercontent.com/mananr333/Binary/refs/heads/main/Binary%20.png';
+            } else {
+                // Show error message
+                document.getElementById('errorMessage').innerText = 'حاول مرة اخرى';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>فك الشفرة</h1>
+        <input type="text" id="pinInput" placeholder="ادخل مفتاح الشفرة">
+        <br>      <br>      <br>
+        <button onclick="checkPin()">إرسال</button>
+        <p id="errorMessage"></p>
+    </div>
+</body>
+</html>
